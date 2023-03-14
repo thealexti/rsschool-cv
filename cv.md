@@ -20,3 +20,70 @@ I am a self-motivated and ambitious web developer with a passion for building st
 - Figma, Adobe Photoshop
 - BEM
 - Scrum, GTD
+### Code example:
+```
+import { Formik, Form, Field, ErrorMessage } from 'formik';
+import * as Yup from 'yup';
+import s from './SumInput.module.scss';
+
+const validationSchema = Yup.object().shape({
+    amount: Yup.string()
+        .required(<span>*Введіть суму або виберіть із запропонованих сум вище</span>)
+        .test('positive', <span>*Введіть суму або виберіть із запропонованих сум вище</span>, value => {
+            return !isNaN(value) && parseFloat(value) > 0;
+        }),
+});
+
+const SumInput = () => {
+    const initialValues = {
+        amount: ''
+    };
+
+    const handleSubmit = (values, { setSubmitting }) => {
+        setTimeout(() => {
+            alert(JSON.stringify(values, null, 2));
+            setSubmitting(false);
+        }, 400);
+    };
+
+    return (
+        <div>
+            <Formik
+                initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
+                {({ errors, touched }) => (
+                    <Form className={s.support__form}>
+                        <Field type='text' name='amount' placeholder='Запропонувати іншу сумму'
+                            className={`${s.support__form_input} ${errors.amount && touched.amount ? s.fieldError : ''}`} />
+                        <ErrorMessage name='amount' />
+                    </Form>
+                )}
+            </Formik>
+        </div>
+    );
+};
+
+export default SumInput;
+```
+### Experience:
+I was part of the team that worked on the social project, we were developing a website for CO "CF "A-HELP UA".
+### Education:
+MS, Ukrainian State University of Chemical Technology – Dnipro
+Equipment of chemical production and building material plants, 2015
+### Courses:
+__Learn Html on__ [Codecademy](https://www.codecademy.com/)
+
+__Learn CSS on__ [Codecademy](https://www.codecademy.com/)
+
+__Learn JavaScript Basics on__ [Codecademy](https://www.codecademy.com/)
+
+__HTML/CSS Marathon on__ [GoIt](https://goit.ua/dlya-novichkov/) 
+
+__JAVASCRIPT 2020 Course on__ [YouTube](https://www.youtube.com/playlist?list=PLM6XATa8CAG7DDIBjNVd78Fv5Ueo930IV) 
+
+__Front-end development on__ [Sigma Software University](https://university.sigma.software/)
+### Languages:
+English (B1)
+
+Ukrainian (native)
+
+Russian (fluent)
