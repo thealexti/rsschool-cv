@@ -21,49 +21,52 @@ I am a self-motivated and ambitious web developer with a passion for building st
 - BEM
 - Scrum, GTD
 ### Code example:
-````
+```
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
 import s from './SumInput.module.scss';
 
 const validationSchema = Yup.object().shape({
-    amount: Yup.string()
-        .required(<span>*Введіть суму або виберіть із запропонованих сум вище</span>)
-        .test('positive', <span>*Введіть суму або виберіть із запропонованих сум вище</span>, value => {
-            return !isNaN(value) && parseFloat(value) > 0;
-        }),
+  amount: Yup.string()
+    .required("*Введіть суму або виберіть із запропонованих сум вище")
+    .test('positive', "*Введіть суму або виберіть із запропонованих сум вище", value => {
+      return !isNaN(value) && parseFloat(value) > 0;
+    }),
 });
 
 const SumInput = () => {
-    const initialValues = {
-        amount: ''
-    };
+  const initialValues = {
+    amount: ''
+  };
 
-    const handleSubmit = (values, { setSubmitting }) => {
-        setTimeout(() => {
-            alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-        }, 400);
-    };
+  const handleSubmit = (values, { setSubmitting }) => {
+    setTimeout(() => {
+      alert(JSON.stringify(values, null, 2));
+      setSubmitting(false);
+    }, 400);
+  };
 
-    return (
-        <div>
-            <Formik
-                initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
-                {({ errors, touched }) => (
-                    <Form className={s.support__form}>
-                        <Field type='text' name='amount' placeholder='Запропонувати іншу сумму'
-                            className={`${s.support__form_input} ${errors.amount && touched.amount ? s.fieldError : ''}`} />
-                        <ErrorMessage name='amount' />
-                    </Form>
-                )}
-            </Formik>
-        </div>
-    );
+  return (
+    <div>
+      <Formik initialValues={initialValues} validationSchema={validationSchema} onSubmit={handleSubmit}>
+        {({ errors, touched }) => (
+          <Form className={s.support__form}>
+            <Field
+              type='text'
+              name='amount'
+              placeholder='Запропонувати іншу сумму'
+              className={`${s.support__form_input} ${errors.amount && touched.amount ? s.fieldError : ''}`}
+            />
+            <ErrorMessage name='amount' />
+          </Form>
+        )}
+      </Formik>
+    </div>
+  );
 };
 
 export default SumInput;
-````
+```
 ### Experience:
 I was part of the team that worked on the social project, we were developing a website for CO "CF "A-HELP UA".
 ### Education:
