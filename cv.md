@@ -28,8 +28,8 @@ import s from './SumInput.module.scss';
 
 const validationSchema = Yup.object().shape({
   amount: Yup.string()
-    .required("*Введіть суму або виберіть із запропонованих сум вище")
-    .test('positive', "*Введіть суму або виберіть із запропонованих сум вище", value => {
+    .required('*Введіть суму або виберіть із запропонованих сум вище')
+    .test('positive', '*Введіть суму або виберіть із запропонованих сум вище', value => {
       return !isNaN(value) && parseFloat(value) > 0;
     }),
 });
