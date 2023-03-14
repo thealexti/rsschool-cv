@@ -21,6 +21,7 @@ I am a self-motivated and ambitious web developer with a passion for building st
 - BEM
 - Scrum, GTD
 ### Code example:
+
 ```
 import { Formik, Form, Field, ErrorMessage } from 'formik';
 import * as Yup from 'yup';
@@ -67,6 +68,7 @@ const SumInput = () => {
 
 export default SumInput;
 ```
+
 ### Experience:
 I was part of the team that worked on the social project, we were developing a website for CO "CF "A-HELP UA".
 ### Education:
