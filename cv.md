@@ -70,11 +70,11 @@ I was part of the team that worked on the social project, we were developing a w
 MS, Ukrainian State University of Chemical Technology – Dnipro
 Equipment of chemical production and building material plants, 2015
 ### Courses:
-__Learn Html on__ [Codecademy](https://www.codecademy.com/)
+__Learn Html on__ [Codecademy](https://www.codecademy.com/learn/learn-html)
 
-__Learn CSS on__ [Codecademy](https://www.codecademy.com/)
+__Learn CSS on__ [Codecademy](https://www.codecademy.com/learn/learn-css/)
 
-__Learn JavaScript Basics on__ [Codecademy](https://www.codecademy.com/)
+__Learn JavaScript Basics on__ [Codecademy](https://www.codecademy.com/learn/introduction-to-javascript)
 
 __HTML/CSS Marathon on__ [GoIt](https://goit.ua/dlya-novichkov/) 
 
