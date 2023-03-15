@@ -1,1 +1,1 @@
-## https://thealexti.github.io/rsschool-cv/cv
+## https://thealexti.github.io/rsschool-cv/
